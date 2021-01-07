@@ -12,7 +12,7 @@ RUN curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key
 RUN echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" >>  /etc/apt/sources.list.d/kubernetes.list
 
 RUN apt-get update \
-    && apt-get install -y kubelet kubeadm kubectl inetutils-ping  \
+    && apt-get install -y kubelet kubeadm kubectl inetutils-ping nano  \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
